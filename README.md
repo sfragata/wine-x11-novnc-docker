@@ -17,10 +17,10 @@ This is a [trusted build](https://registry.hub.docker.com/u/solarkennedy/wine-x1
 on the Docker Hub.
 
 ## Run It
-
+```
     docker run --rm -p 8080:8080 solarkennedy/wine-x11-novnc-docker
-    xdg-open http://localhost:8080
-
+    xdg-open http://localhost:9010
+```
 In your web browser you should see the default application, explorer.exe:
 
 ![Explorer Screenshot](https://raw.githubusercontent.com/solarkennedy/wine-x11-novnc-docker/master/screenshot.png)

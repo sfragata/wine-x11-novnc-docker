@@ -1,8 +1,11 @@
 build:
 	docker build -t wine-x11-novnc-docker .
 
-run: build
-	docker run --rm -p 18080:8080 wine-x11-novnc-docker
+run:
+	docker run --rm -d -p 9010:9010 --name wine-docker -v /Users/Silvio.Silva/temp/wine:/wine wine-x11-novnc-docker
 
-shell: build
-	docker run --rm -ti -p 18080:8080 wine-x11-novnc-docker bash
+shell:
+	docker exec -ti wine-docker bash
+
+logs:
+		docker logs wine-docker
